@@ -49,6 +49,6 @@ const userSchema: Schema = new mongoose.Schema({
     collection: 'users'
 })
 
-const UsersModel = mongoose.model<UserInterface>('users', userSchema)
+const UserModel = mongoose.model<UserInterface>('users', userSchema)
 
-export default UsersModel
+export default UserModel

@@ -1,13 +1,27 @@
 import mongoose, { Schema } from "mongoose";
 
-const scienceCouplesSchema: Schema = new mongoose.Schema({
+const scienceCoupleSchema: Schema = new mongoose.Schema({
     id: {
         type: mongoose.Types.ObjectId
     },
     first_science: {
-        type: String
+        ref: 'sciences',
+        type: mongoose.Types.ObjectId
     },
     second_science: {
-        type: String
-    }
+        ref: 'sciences',
+        type: mongoose.Types.ObjectId
+    },
+    faculties: [
+        {
+            ref: 'faculties',
+            type: mongoose.Types.ObjectId
+        }
+    ]
+}, {
+    collection: 'science_couples'
 })
+
+const ScienceCoupleModel = mongoose.model('science_couples', scienceCoupleSchema);
+
+export default ScienceCoupleModel;

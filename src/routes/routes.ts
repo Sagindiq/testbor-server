@@ -1,8 +1,9 @@
-import { Router, RouterOptions } from "express";
+import { Router } from "express";
+import scienceRoutes from "./science/science.routes";
 import userRoutes from "./users/user.routes";
 
-const router: Router = Router()
+const router = Router()
 
 export default router
-    .use([ userRoutes ])
+    .use([ userRoutes, scienceRoutes ])
 
