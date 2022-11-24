@@ -6,7 +6,6 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "tsc",
     "build": "node ./dist/src/server.js",
     "start": "node ./dist/src/server.js",
     "dev": "nodemon ./src/server.ts"
