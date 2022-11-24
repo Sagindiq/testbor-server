@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionModel = exports.TestModel = exports.FacultyModel = exports.HeiModel = exports.ScienceCoupleModel = exports.ScienceModel = exports.UserModel = void 0;
+const users_model_1 = __importDefault(require("./users.model"));
+exports.UserModel = users_model_1.default;
+const sciences_model_1 = __importDefault(require("./sciences.model"));
+exports.ScienceModel = sciences_model_1.default;
+const scienceCouples_model_1 = __importDefault(require("./scienceCouples.model"));
+exports.ScienceCoupleModel = scienceCouples_model_1.default;
+const heis_model_1 = __importDefault(require("./heis.model"));
+exports.HeiModel = heis_model_1.default;
+const faculties_model_1 = __importDefault(require("./faculties.model"));
+exports.FacultyModel = faculties_model_1.default;
+const tests_model_1 = __importDefault(require("./tests.model"));
+exports.TestModel = tests_model_1.default;
+const options_model_1 = __importDefault(require("./options.model"));
+exports.OptionModel = options_model_1.default;
