@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const model_1 = require("../model");
 const error_handler_1 = __importDefault(require("../errors/error.handler"));
 exports.default = {
-    GET: (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    GET: (_, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         const allScience = yield model_1.ScienceModel.find().catch(err => next(new error_handler_1.default(err.message)));
         return res.json(allScience);
     })

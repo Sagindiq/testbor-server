@@ -9,9 +9,11 @@ const express_1 = __importDefault(require("express"));
 const error_middleware_1 = __importDefault(require("./middlewares/error.middleware"));
 const routes_1 = __importDefault(require("./routes/routes"));
 const mongoose_1 = __importDefault(require("./utils/mongoose"));
+const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 // const PORT: string | number = process.env.PORT
 const PORT = process.env.PORT || 9000;
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(routes_1.default);
 app.use(error_middleware_1.default);

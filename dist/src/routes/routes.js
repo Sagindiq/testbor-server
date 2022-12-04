@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const science_routes_1 = __importDefault(require("./science/science.routes"));
 const user_routes_1 = __importDefault(require("./users/user.routes"));
+const faculty_routes_1 = __importDefault(require("./faculty/faculty.routes"));
 const router = (0, express_1.Router)();
 exports.default = router
-    .use([user_routes_1.default, science_routes_1.default]);
+    .use([user_routes_1.default, science_routes_1.default, faculty_routes_1.default]);

@@ -24,11 +24,11 @@ const facultySchema: Schema = new mongoose.Schema({
         type: Number,
         requried: true
     },
-    exam_science: {
+    exam_sciences: {
         ref: 'science_couples',
         type: mongoose.Types.ObjectId
     },
-    heid_id: {
+    hei: {
         ref: 'heis',
         type: mongoose.Types.ObjectId
     }
