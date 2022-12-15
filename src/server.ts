@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-dotenv.config()
+dotenv.config({path: './server.env'})
 import express, { Application } from 'express'
 import errorHandle from './middlewares/error.middleware'
 import router from './routes/routes'
