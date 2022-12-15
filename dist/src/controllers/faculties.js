@@ -23,7 +23,6 @@ exports.default = {
             if (findCouple) {
                 const findFaculties = yield model_1.FacultyModel.find({ exam_sciences: findCouple._id }).populate({
                     path: 'hei',
-                    select: ['hei_name', 'short_name'],
                     strictPopulate: false
                 });
                 findFaculties ? res.json(findFaculties) : next(new error_handler_1.default('Faculties not found', 404));

@@ -13,7 +13,6 @@ export default {
             if(findCouple) {
                 const findFaculties = await FacultyModel.find({exam_sciences: findCouple._id}).populate({
                     path: 'hei',
-                    select: ['hei_name', 'short_name'],
                     strictPopulate: false
                 })
 

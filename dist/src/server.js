@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
+dotenv_1.default.config({ path: './server.env' });
 const express_1 = __importDefault(require("express"));
 const error_middleware_1 = __importDefault(require("./middlewares/error.middleware"));
 const routes_1 = __importDefault(require("./routes/routes"));
