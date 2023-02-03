@@ -10,6 +10,10 @@ export default {
         if (first_science && second_science) {
             const findCouple = await ScienceCoupleModel.findOne({ first_science, second_science })
 
+            console.log(findCouple)
+
+            console.log(await ScienceCoupleModel.find())
+
             if(findCouple) {
                 const findFaculties = await FacultyModel.find({exam_sciences: findCouple._id}).populate({
                     path: 'hei',
@@ -26,6 +30,6 @@ export default {
             return next(new ErrorHandler(`first science or second science not provided`))
         }
 
-
+        
     }
 }

@@ -8,14 +8,14 @@ const testSchema: Schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    options: [
-        {
-            ref: 'options',
-            type: mongoose.Types.ObjectId
-        }
-    ],
+    options: {
+        type: Array,
+        required: true,
+        minlength: 4,
+        maxlength: 4
+    },
     answer: {
-        type: Number,
+        type: String,
         required: true
     },
     science_id: {
